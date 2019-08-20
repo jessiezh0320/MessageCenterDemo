@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MessageApp1.LoadItemPutawayTemplate">
+    <ContentView.Content>
+        <Grid
+             RowSpacing="0"
+             Padding="0"
+             Margin="0,2,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry
+            x:Name="OverrideLoc"
+            Grid.Column="0"
+            TextColor="Black"
+            WidthRequest="110"
+            Text="{Binding ToLocation}"
+            HorizontalOptions="StartAndExpand"
+            VerticalOptions="Center"
+            FontAttributes="Bold"
+            PlaceholderColor="Black"
+            FontSize="20"/>
+            <Button
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                x:Name="LocationBtn"
+                Text="Override Loc"
+                BackgroundColor="#25D366"
+                TextColor="{DynamicResource AccentColor}"
+                BorderColor="#25D366"
+                Clicked="LocationBtn_Clicked"/>
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

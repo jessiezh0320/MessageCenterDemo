@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:messageapp1="clr-namespace:MessageApp1"
+             mc:Ignorable="d"
+             x:Class="MessageApp1.MainPage">
+
+    <StackLayout>
+        <ListView
+        x:Name="workList"
+        Grid.Row="0"
+        Margin="5"
+        CachingStrategy="RecycleElement"
+        RowHeight="100"
+        SeparatorVisibility="Default"
+        SelectionMode="None"
+        HasUnevenRows="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <messageapp1:LoadItemPutawayTemplate />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
